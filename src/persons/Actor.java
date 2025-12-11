@@ -1,8 +1,10 @@
+package persons;
+
 import java.util.Objects;
 
 public class Actor extends Person {
 
-    private final int height;
+    private int height;
 
     public Actor(String name, String surname, Gender gender, int height) {
         super(name, surname, gender);
@@ -11,6 +13,10 @@ public class Actor extends Person {
 
     public int getHeight() {
         return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override
@@ -32,4 +38,5 @@ public class Actor extends Person {
                 " Фамилия актёра: " + getSurname() +
                 " (Рост актера в сантиметрах: " + getHeight() + ")";
     }
+
 }

@@ -1,6 +1,8 @@
+package persons;
+
 public class Director extends Person {
 
-    private final int numberOfShows;
+    private int numberOfShows;
 
     public Director(String name, String surname, Gender gender, int numberOfShows) {
         super(name, surname, gender);
@@ -11,9 +13,14 @@ public class Director extends Person {
         return numberOfShows;
     }
 
+    public void setNumberOfShows(int numberOfShows) {
+        this.numberOfShows = numberOfShows;
+    }
+
     @Override
     public String toString() {
         return "Имя режиссера: " + getName() +
                 " Фамилия режиссера: " + getSurname();
     }
+
 }

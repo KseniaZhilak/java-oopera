@@ -1,3 +1,10 @@
+import persons.Actor;
+import persons.Director;
+import persons.Gender;
+import shows.Ballet;
+import shows.MusicalShow;
+import shows.Opera;
+
 import java.util.ArrayList;
 
 public class Theatre {
@@ -15,26 +22,29 @@ public class Theatre {
         Opera opera = new Opera("Опера",84, secondDirector, new ArrayList<>(),"Автор оперы", "Интересная опера", 15);
         Ballet ballet = new Ballet("Балет",175, firstDirector, new ArrayList<>(),"Автор балета", "Интересный балет", "Хореограф балета");
 
-        // Распределить актёров по спектаклям
+        System.out.println("Распределить актёров по спектаклям");
         musicalShow.addNewActor(firstActor);
         musicalShow.addNewActor(secondActor);
         opera.addNewActor(secondActor);
         ballet.addNewActor(thirdActor);
         ballet.addNewActor(firstActor);
 
-        // Для каждого спектакля выведите на экран список актёров
+        System.out.println("Cписок актёров musicalShow");
         musicalShow.printActors();
+
+        System.out.println("Cписок актёров opera");
         opera.printActors();
+
+        System.out.println("Cписок актёров ballet");
         ballet.printActors();
 
-        // Замените актёра в одном из спектаклей на актёра из другого спектакля и ещё раз выведите для него список актёров
+        System.out.println("Замена актера в спектакле musicalShow");
         musicalShow.replaceActor(thirdActor, firstActor.getSurname());
         musicalShow.printActors();
 
-        // Заменить в спектакле несуществующего актёра
+        System.out.println("Заменить в opera на несуществующего актёра");
         opera.replaceActor(firstActor, thirdActor.getSurname());
 
-        // Для оперного и балетного спектакля выведите на экран текст либретто
         opera.printLibretto();
         ballet.printLibretto();
 
