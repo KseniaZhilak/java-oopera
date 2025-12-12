@@ -20,13 +20,13 @@ public class Show {
     }
 
     public void addNewActor(Actor newActor) {
-        if(listOfActors.isEmpty()) {
+        if (listOfActors.isEmpty()) {
             listOfActors.add(newActor);
             return;
         }
 
         for (Actor actor : listOfActors) {
-            if(newActor.equals(actor)) {
+            if (newActor.equals(actor)) {
                 System.out.println("Данный актер уже добавлен в группу");
                 return;
             } else {
@@ -49,7 +49,7 @@ public class Show {
 
     public void replaceActor(Actor newActor, String surname) {
         for (Actor actor : listOfActors) {
-            if(surname.equals(actor.getSurname())) {
+            if (surname.equals(actor.getSurname())) {
                 listOfActors.remove(actor);
                 listOfActors.add(newActor);
                 return;
